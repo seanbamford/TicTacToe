@@ -2,12 +2,12 @@ import { useState } from 'react'
 import './App.css'
 
 function Game() {
-  const [history, setHistory] = useState<Array<Array<number>>>([Array(9).fill(null)]);
+  const [history, setHistory] = useState<Array<Array<string | null>>>([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext: boolean = currentMove % 2 === 0;
-  const currentSquares: Array<number | null> = history[currentMove];
+  const currentSquares: Array<string | null> = history[currentMove];
 
-  function handlePlay(nextSquares: Array<number>) {
+  function handlePlay(nextSquares: Array<string | null>) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
@@ -17,7 +17,7 @@ function Game() {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((move: Array<number>) => {
+  const moves = history.map((move: Array<string | null>) => {
     let description: string;
     const i =history.indexOf(move);
     if (i != 0) {
@@ -56,7 +56,7 @@ function Square({ value, onSquareClick }: { value: string | null; onSquareClick:
 function Board({ xIsNext, squares, onPlay }: { xIsNext: boolean; squares: Array<string | null>; onPlay: (nextSquares: Array<string | null>) => void }) {
   function handleClick(i: number) {
     if (squares[i] || calculateWinner(squares)) return;
-    const nextSquares = squares.slice();
+    const nextSquares: Array<string | null> = squares.slice();
     if (xIsNext) nextSquares[i] = "X";
     else nextSquares[i] = "O";
     onPlay(nextSquares);
