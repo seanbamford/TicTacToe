@@ -80,6 +80,7 @@ body {
 .status {
   margin-bottom: 10px;
 }
+
 .game {
   display: flex;
   flex-direction: row;
@@ -87,4 +88,20 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+
+.win {
+  background: radial-gradient(#e66465, #9198e5);
+  animation: nice 2s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+
+@keyframes nice {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
