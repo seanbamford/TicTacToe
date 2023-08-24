@@ -28,9 +28,9 @@ function Game() {
     const location: string = " (Row: " + coordinates.row + " Column: " + coordinates.column + ")";
     const i = history.indexOf(move);
     if (i != 0) {
-      description = "Go to move #" + Number(history.indexOf(move) + 1) + location;
+      description = "Go to move #" + Number(history.indexOf(move) + 1 )+ "." + location;
     } else {
-      description = "Go to game start";
+      description = "Go to game start.";
     }
     if (history[currentMove] !== move || currentMove == 0) {
       return (
@@ -39,7 +39,7 @@ function Game() {
         </li>
       );
     } else {
-      return <div key={i}>{"You are at move #" + (currentMove + 1)}</div>;
+      return <div key={i}>{"You are at move #" + (currentMove + 1)+ "."}</div>;
     }
   });
 
@@ -51,7 +51,7 @@ function Game() {
     if(prev){
     index = now.findIndex((element: string|null, idx: number) => element !== prev[idx]);}
     else {index = now.findIndex((element: string|null) => element && true)}
-    const row = Math.floor(index / 3) +1;
+    const row = Math.floor(index / 3) + 1;
     const column = index % 3 + 1;
   
     return { row, column };
@@ -64,9 +64,9 @@ function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} moveNumber={currentMove} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <h6>Move List</h6>
-        <button onClick={handleSort}>Sort Moves</button>
-        <ol>{sortedMoves}</ol>
+      {sortedMoves.length > 1 ? <div className='status'>Move List</div>: ""}
+        {sortedMoves.length > 1 ? <button onClick={handleSort}>Sort Moves</button> : ""}
+        {sortedMoves.length > 1 ?<ol>{sortedMoves}</ol>: ""}
       </div>
     </div>
   );

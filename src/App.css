@@ -51,9 +51,28 @@ ul {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Georgia;
+  font-variant: small-caps;
+  font-weight: 500;
+
   margin: 20px;
   padding: 0;
+}
+
+div:not(.board-row) {
+  padding-top: 3px;
+  position: relative;
+  text-shadow: #fff;
+}
+
+button:not(.square) {
+  color: #fff;
+  background: linear-gradient(#9198e5, #1b2269);
+  font-family: Georgia;
+  font-variant: small-caps;
+  padding: 3px 8px;
+  border-radius: 5px;
+  mix-blend-mode: luminosity;
 }
 
 .square {
@@ -78,22 +97,55 @@ body {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  width: fit-content;
+  min-width:max-content;
+  border-radius: 10px;
+  background: linear-gradient(#e66465, #9198e5);
+  filter: drop-shadow(3px 3px 3px #9198e5) drop-shadow(0px 5px 5px black);
+  mix-blend-mode: screen;
+}
+
+.game-board {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  text-align: center;
+
+
+}
+
+ol {
+  margin: 0;
+  padding: 0px 0px;
+  padding-inline-start: 0%;
+  position: relative;
+  list-style: none;
+}
+
+li {
+  padding-top: 3px;
 }
 
 .win {
   background: radial-gradient(#e66465, #9198e5);
   animation: nice 2s ease-in-out infinite alternate;
-  mix-blend-mode: screen;
+  mix-blend-mode: hard-light;
 }
 
 @keyframes nice {
