@@ -1,159 +1,157 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+	font-family: sans-serif;
+	margin: 20px;
+	padding: 0;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 22px;
+	margin-top: 0;
+	font-size: 22px;
 }
 
 h2 {
-  margin-top: 0;
-  font-size: 20px;
+	margin-top: 0;
+	font-size: 20px;
 }
 
 h3 {
-  margin-top: 0;
-  font-size: 18px;
+	margin-top: 0;
+	font-size: 18px;
 }
 
 h4 {
-  margin-top: 0;
-  font-size: 16px;
+	margin-top: 0;
+	font-size: 16px;
 }
 
 h5 {
-  margin-top: 0;
-  font-size: 14px;
+	margin-top: 0;
+	font-size: 14px;
 }
 
 h6 {
-  margin-top: 0;
-  font-size: 12px;
+	margin-top: 0;
+	font-size: 12px;
 }
 
 code {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 ul {
-  padding-inline-start: 20px;
+	padding-inline-start: 20px;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: Georgia;
-  font-variant: small-caps;
-  font-weight: 500;
+	font-family: Georgia;
+	font-variant: small-caps;
+	font-weight: 500;
 
-  margin: 20px;
-  padding: 0;
+	margin: 20px;
+	padding: 0;
 }
 
 div:not(.board-row) {
-  padding-top: 3px;
-  position: relative;
-  text-shadow: #fff;
+	padding-top: 3px;
+	position: relative;
+	text-shadow: #fff;
 }
 
 button:not(.square) {
-  color: #fff;
-  background: linear-gradient(#9198e5, #1b2269);
-  font-family: Georgia;
-  font-variant: small-caps;
-  padding: 3px 8px;
-  border-radius: 5px;
-  mix-blend-mode: luminosity;
+	color: #fff;
+	background: linear-gradient(#9198e5, #1b2269);
+	font-family: Georgia;
+	font-variant: small-caps;
+	padding: 3px 8px;
+	border-radius: 5px;
+	mix-blend-mode: luminosity;
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+	background: #fff;
+	border: 1px solid #999;
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 34px;
+	height: 34px;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	text-align: center;
+	width: 34px;
 }
 
 .board-row:after {
-  clear: both;
-  content: '';
-  display: table;
+	clear: both;
+	content: '';
+	display: table;
 }
 
 .status {
-  margin-bottom: 5px;
-  color: #fff;
+	margin-bottom: 5px;
+	color: #fff;
 }
 
 .game {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  position: relative;
-  margin: 0 auto;
-  padding: 10px;
-  width: fit-content;
-  min-width:max-content;
-  border-radius: 10px;
-  background: linear-gradient(#e66465, #9198e5);
-  filter: drop-shadow(3px 3px 3px #9198e5) drop-shadow(0px 5px 5px black);
-  mix-blend-mode: screen;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px;
+	width: fit-content;
+	min-width: max-content;
+	border-radius: 10px;
+	background: linear-gradient(#e66465, #9198e5);
+	filter: drop-shadow(3px 3px 3px #9198e5) drop-shadow(0px 5px 5px black);
+	mix-blend-mode: screen;
 }
 
 .game-board {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .game-info {
-  margin: 0px 20px 0px 20px;
-  position: relative;
-  text-align: center;
-
-
+	margin: 0px 20px 0px 20px;
+	position: relative;
+	text-align: center;
 }
 
 ol {
-  margin: 0;
-  padding: 0px 0px;
-  padding-inline-start: 0%;
-  position: relative;
-  list-style: none;
+	margin: 0;
+	padding: 0px 0px;
+	padding-inline-start: 0%;
+	position: relative;
+	list-style: none;
 }
 
 li {
-  padding-top: 3px;
+	padding-top: 3px;
 }
 
 .win {
-  background: radial-gradient(#e66465, #9198e5);
-  animation: nice 2s ease-in-out infinite alternate;
-  mix-blend-mode: hard-light;
+	background: radial-gradient(#e66465, #9198e5);
+	animation: nice 2s ease-in-out infinite alternate;
+	mix-blend-mode: hard-light;
 }
 
 @keyframes nice {
-  0% {
-    filter: hue-rotate(0deg);
-  }
+	0% {
+		filter: hue-rotate(0deg);
+	}
 
-  100% {
-    filter: hue-rotate(360deg);
-  }
+	100% {
+		filter: hue-rotate(360deg);
+	}
 }
